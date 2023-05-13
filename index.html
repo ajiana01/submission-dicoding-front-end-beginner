@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/349fd60cba.js" crossorigin="anonymous"></script>
+    <title>My Website | Anantagonis</title>
+</head>
+<body>
+
+<!--HEADER-->
+<header>
+    <h1>Ananta<span class="color">gonis.</span></h1>
+    <!--NAVBAR-->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#reach-me">Reach Me</a></li>
+        </ul>
+
+        <div class="hamburger">
+            <i class="fa-solid fa-bars fa-xl"></i>
+        </div>
+        <div class="x">
+            <i class="fa-solid fa-x fa-xl"></i>
+        </div>
+
+    </nav>
+
+</header>
+
+<!--MAIN-->
+<main>
+    <!--HERO-->
+    <div class="hero">
+        <div class="hero-left">
+            <h1>Nur Aji <span class="color"> Ananta</span>, </h1>
+            <p class="caption">"Design and coding are two sides of the same coin, and I believe that I am the bridge that connects them."</p><br>
+            <p class="detail-me">I have expertise in creating visually appealing and user-friendly interfaces as a UI designer and front-end developer. With experience in user research, wireframing, high-fidelity mockups, HTML, CSS, JavaScript, I can design and develop optimized and responsive websites and applications that work across multiple platforms. I also excel in collaborating with team members to create the best possible outcomes.</p>
+            <button type="submit">Talk with Me</button>
+        </div>
+
+        <div class="hero-right">
+            <object data="resource/aji.svg" type="image/svg+xml" width="auto" height="500"></object>
+        </div>
+
+    </div>
+
+    <!--ASIDE-->
+    <aside class="sticky-aside">
+        <ul>
+            <li><a href="https://www.instagram.com/ajiana01" target="_blank">
+                <i class="fa-brands fa-instagram fa-xl"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/nur-aji-ananta-824409221/" target="_blank"> <i class="fa-brands fa-linkedin fa-xl"></i></a></li>
+            <li><a href="https://www.facebook.com/ajiana01" target="_blank"><i class="fa-brands fa-facebook fa-xl"></i></a></li>
+            <li><a href="https://github.com/ajiana01" target="_blank"><i class="fa-brands fa-github fa-xl"></i></a></li>
+        </ul>
+    </aside>
+
+    <!--ABOUT-->
+    <div id="about" class="about">
+        <h1>About <span class="color">Me.</span></h1>
+
+        <object data="resource/profil.png" type="image/png" width="300" height="300"></object>
+
+        <p>Hi there, my name is <span class="color">Nur Aji Ananta</span>, and I am a Student with a passion for UI Design and Front-End Developer. I have always been fascinated by Web Developer, and I enjoy keeping up to date with the latest trends and technologies.</p><br>
+        <p>In my free time, I enjoy read a book, which helps me to stay creative and motivated. I am also an avid learner and enjoy exploring new topics and ideas to expand my knowledge and skills.</p><br>
+        <p>As a Front-End Developer, I am committed to my values and philosophy. I believe in the value of flexibility and agility, being able to adapt quickly to changing needs and technologies. I am willing to learn new things, try different approaches, and face challenges with an open and flexible mindset. Additionally, my main principle is to create delightful user experiences. I pay attention to small details, provide clear visual feedback, and strive to enhance intuitive and natural interactions. I always aim to incorporate these values into everything I do, whether it's working on projects or engaging with clients and colleagues, delivering high-quality work with integrity and professionalism.</p><br>
+        <p>Thank you for taking the time to learn a little bit more about me. If you have any questions or would like to connect, please don't hesitate to reach out.</p>
+    </div>
+
+    <!--PORTFOLIO-->
+    <div id="portfolio" class="portfolio">
+        <h1><span class="color">My</span> Portfolio</h1>
+        <div class="portfolio-gallery">
+            <div class="portfolio-item">
+                <div class="img-port"></div>
+                <h2>Portfolio <span class="color">1</span></h2>
+            </div>
+            <div class="portfolio-item">
+                <div class="img-port"></div>
+                <h2>Portfolio <span class="color">2</span></h2>
+            </div>
+            <div class="portfolio-item">
+                <div class="img-port"></div>
+                <h2>Portfolio <span class="color">3</span></h2>
+            </div>
+        </div>
+    </div>
+
+    <!--FORM-->
+    <form action="" method="post">
+        <h1>Send <span class="color">Message</span></h1>
+        <div class="name-email">
+            <label for="name">
+                <input id="name" name="name" type="text" placeholder="Name" class="name" required>
+            </label>
+            <label for="email">
+                <input id="email" name="email" type="email" placeholder="Email" class="email" required>
+            </label>
+        </div>
+        <label for="message">
+            <textarea id="message" name="message" class="msg" placeholder="Send me a message"></textarea>
+        </label>
+        <button type="submit">Submit</button>
+    </form>
+</main>
+
+<!--FOOTER-->
+<footer id="reach-me" class="footer">
+    <h1><span class="color">Reach</span> Me</h1>
+    <p>Connect with <span class="color">Me</span></p>
+    <ul>
+        <li><a href="https://www.instagram.com/ajiana01" target="_blank">
+            <i class="fa-brands fa-instagram fa-2xl"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/nur-aji-ananta-824409221/" target="_blank"> <i class="fa-brands fa-linkedin fa-2xl"></i></a></li>
+        <li><a href="https://www.facebook.com/ajiana01" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a></li>
+        <li><a href="https://github.com/ajiana01" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a></li>
+    </ul>
+</footer>
+
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('header nav ul');
+    const xburger = document.querySelector('.x');
+
+    hamburger.addEventListener('click', function() {
+        nav.classList.toggle('slide')
+        hamburger.classList.toggle('close')
+        xburger.classList.toggle('show')
+    });
+
+    document.querySelectorAll('header nav ul li a').forEach(n => n.addEventListener('click', () => {
+        nav.classList.toggle('slide')
+        xburger.classList.toggle('show')
+        hamburger.classList.toggle('close')
+    }))
+
+    xburger.addEventListener('click', function () {
+        nav.classList.toggle('slide')
+        hamburger.classList.toggle('close')
+        xburger.classList.toggle('show')
+    });
+
+</script>
+
+</body>
+</html>
