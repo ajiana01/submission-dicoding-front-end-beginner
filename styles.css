@@ -46,7 +46,7 @@ header nav ul {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding: 10px 0 10px 0px;
+    padding: 10px 0 10px 0;
 }
 nav ul li a {
     text-decoration: none;
@@ -84,7 +84,6 @@ main {
 }
 .hero {
     margin-top: 50px;
-    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     padding: 0 10% 0 10%;
@@ -95,7 +94,6 @@ main {
     justify-content: center;
     align-items: start;
     padding: 20px;
-    width: 40%;
     width: 60%;
 }
 .hero-left h1 {
@@ -205,29 +203,91 @@ button:hover {
 /*Main-Portfolio-End*/
 
 /*Main-Aside*/
-.sticky-aside {
+aside {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #E4E866;
+    position: sticky;
+    top: 80%;
+    left: 95%;
+    margin: 10px 0 10px 0;
+    transition: 1s;
+}
+aside .container-aside .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 15px ;
+}
+.info i {
+    color: #012333;
+}
+aside .container-aside .x-aside {
+    display: none;
+}
+aside p, aside h3, aside ul {
+    display: none;
+}
+
+/*AsideClick*/
+aside.asideClick {
     background-color: #E4E866;
     position: absolute;
-    top: 150px;
-    width: 60px;
-    padding: 10px 10px 10px 10px;
-    border-radius: 10px 0px 0px 10px;
-    text-align: center;
-    align-self: flex-end;
-    z-index: -1;
+    width: 80%;
+    align-items: flex-start;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    top: 100px;
+    border-radius: 10px;
+    line-height: 25px;
+    transition: 1s;
+    transition-delay: initial;
+    left: 10%;
+    height: max-content;
 }
-.sticky-aside ul li {
-    list-style: none;
-}
-.sticky-aside ul li a {
+aside.asideClick .container-aside .x-aside {
     display: block;
-    width: 30;
-    height: auto;
-    margin: 15px;
-    text-decoration: none;
+    top: 2%;
+    right: 2%;
+    position: absolute;
+    cursor: pointer;
 }
-.sticky-aside ul li a i {
-    color: #01121b;
+aside.asideClick .container-aside .x-aside i {
+    color: #012333;
+}
+aside.asideClick .container-aside .info{
+    display: none;
+}
+aside.asideClick h3 {
+    align-self: center;
+    font-size: 1.6em;
+    color: #012333;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+aside.asideClick .profile-aside {
+    list-style: none;
+    display: block;
+}
+aside.asideClick p, aside.asideClick ul li{
+    color: #012333;
+    font-size: 1.2em;
+    display: block;
+}
+aside.asideClick ul{
+    margin-bottom: 10px;
+    display: block;
+    list-style: -moz-hangul;
+}
+aside.asideClick .profile-sum {
+    margin-bottom: 10px;
+}
+aside.asideClick .profile-aside {
+    list-style-position: outside;
 }
 /*Main-Aside-End*/
 
@@ -349,7 +409,7 @@ footer ul li{
         display: flex;
         flex-direction: column;
         background-color: #012333;
-        right: 0px;
+        right: 0;
         height: 30vh;
         top: 90px;
         align-items: center;

@@ -34,7 +34,7 @@
 <!--MAIN-->
 <main>
     <!--HERO-->
-    <div class="hero">
+    <div class="hero" id="hero">
         <div class="hero-left">
             <h1>Nur Aji <span class="color"> Ananta</span>, </h1>
             <p class="caption">"Design and coding are two sides of the same coin, and I believe that I am the bridge that connects them."</p><br>
@@ -49,13 +49,50 @@
     </div>
 
     <!--ASIDE-->
-    <aside class="sticky-aside">
+    <aside>
+        <div class="container-aside">
+            <div class="info">
+                <a href="#hero"><i class="fa-solid fa-circle-info fa-xl"></i></a>
+            </div>
+            <div class="x-aside">
+                <i class="fa-solid fa-x fa-xl"></i>
+            </div>
+        </div>
+        <h3>
+            Profile Card
+        </h3>
+        <ul class="profile-aside">
+            <li>
+                Name: Nur Aji Ananta
+            </li>
+            <li>
+                Profession: Student
+            </li>
+            <li>
+                Location: Semarang
+            </li>
+        </ul>
+        <p class="profile-sum">Profile Summary:<br>
+            I am a student at Universitas Negeri Semarang with a passion for front-end development and a strong skill set in design, particularly in Adobe Illustrator and Photoshop. I am dedicated to creating visually appealing and user-friendly interfaces.</p>
+        <p>Skill:</p>
         <ul>
-            <li><a href="https://www.instagram.com/ajiana01" target="_blank">
-                <i class="fa-brands fa-instagram fa-xl"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/nur-aji-ananta-824409221/" target="_blank"> <i class="fa-brands fa-linkedin fa-xl"></i></a></li>
-            <li><a href="https://www.facebook.com/ajiana01" target="_blank"><i class="fa-brands fa-facebook fa-xl"></i></a></li>
-            <li><a href="https://github.com/ajiana01" target="_blank"><i class="fa-brands fa-github fa-xl"></i></a></li>
+            <li>Front-end development</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Adobe Illustrator</li>
+            <li>Adobe Photoshop</li>
+            <li>User Interface (UI) Design</li>
+        </ul>
+        <p>Education:</p>
+        <ul>
+            <li>Bachelor's Degree in Computer Science: Universitas Negeri Semarang (expected graduation 2025)</li>
+        </ul>
+        <p>Projects:</p>
+        <ul>
+            <li>Developed a responsive website using HTML, CSS, and JavaScript.</li>
+            <li>Designed and implemented a user-friendly mobile application interface.</li>
+            <li>Created visually appealing graphics and illustrations using Adobe Illustrator and Photoshop.</li>
         </ul>
     </aside>
 
@@ -125,6 +162,8 @@
     const hamburger = document.querySelector('.hamburger');
     const nav = document.querySelector('header nav ul');
     const xburger = document.querySelector('.x');
+    const xaside = document.querySelector('.container-aside');
+    const infoProfile = document.querySelector('aside')
 
     hamburger.addEventListener('click', function() {
         nav.classList.toggle('slide')
@@ -144,6 +183,9 @@
         xburger.classList.toggle('show')
     });
 
+    xaside.addEventListener('click',function () {
+        infoProfile.classList.toggle('asideClick')
+    });
 </script>
 
 </body>
