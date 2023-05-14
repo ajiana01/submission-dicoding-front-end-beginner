@@ -214,6 +214,9 @@ aside {
     margin: 10px 0 10px 0;
     transition: 1s;
 }
+aside img {
+    display: none;
+}
 aside .container-aside .info {
     display: flex;
     justify-content: center;
@@ -248,6 +251,16 @@ aside.asideClick {
     transition-delay: initial;
     left: 10%;
     height: max-content;
+}
+aside.asideClick img {
+    display: block;
+    position: absolute;
+    align-self: center;
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    right: 30px;
+    bottom: 40px;
 }
 aside.asideClick .container-aside .x-aside {
     display: block;
@@ -357,7 +370,11 @@ footer ul li{
         right: 200px;
     }
 }
-
+@media screen and (max-width: 1400px){
+    aside.asideClick img {
+        display: none;
+    }
+}
 @media screen and (max-width: 1200px) {
     .hero-left{
         width: 90%;
