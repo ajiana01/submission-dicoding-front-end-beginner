@@ -228,7 +228,7 @@ aside .container-aside .x-aside {
     display: none;
 }
 aside p, aside h3, aside ul {
-    display: none;
+    opacity: 0;
 }
 
 /*AsideClick*/
@@ -270,8 +270,8 @@ aside.asideClick h3 {
     display: inline-block;
 }
 aside.asideClick .profile-aside {
-    list-style: none;
     display: block;
+    padding-left: 0;
 }
 aside.asideClick p, aside.asideClick ul li{
     color: #012333;
@@ -281,13 +281,14 @@ aside.asideClick p, aside.asideClick ul li{
 aside.asideClick ul{
     margin-bottom: 10px;
     display: block;
-    list-style: -moz-hangul;
+    padding-left: 10px;
+    list-style: circle;
 }
 aside.asideClick .profile-sum {
     margin-bottom: 10px;
 }
-aside.asideClick .profile-aside {
-    list-style-position: outside;
+aside.asideClick p, aside.asideClick h3, aside.asideClick ul {
+    opacity: 1;
 }
 /*Main-Aside-End*/
 
@@ -372,6 +373,8 @@ footer ul li{
         display: block;
         margin-bottom: 60px;
         border-radius: 50%;
+        width: 200px;
+        height: 200px;
     }
     nav {
         width: 40%;
@@ -443,5 +446,50 @@ footer ul li{
     }
     .sticky-aside {
         display: none;
+    }
+}
+@media screen and (max-width: 500px){
+    main {
+        width: 100%;
+        max-width: 500px;
+    }
+    .hero {
+        justify-content: center;
+    }
+    .hero-left{
+        max-width: 300px;
+        font-size: 0.8em;
+    }
+    aside {
+        left: 320px;
+        top: 400px;
+    }
+    aside.asideClick {
+        font-size: 0.8em;
+    }
+    .about {
+        width: 100%;
+        font-size: 0.8em;
+    }
+    .about object {
+        height: 150px;
+        width: 150px;
+    }
+    .portfolio-item {
+        width: 300px;
+        height: 350px;
+    }
+    .name-email {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+        width: 100%;
+    }
+    .name, .email {
+        width: 300px;
+        margin-bottom: 15px;
+    }
+    .msg {
+        width: 300px;
     }
 }
